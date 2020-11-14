@@ -1,0 +1,1 @@
+var currentURL,loadedJoblist;'use strict',currentURL=window.location.href,currentURL!="https://hk.jobsdb.com/hk"&&currentURL!="http://hk.jobsdb.com/hk"&&(loadedJoblist=!1,setTimeout(function(){while(!loadedJoblist)$(".FYwKg._48Av0_6 div").first().hasClass("FYwKg _2cWXo _1Swh0 _1nW1T_6")&&(loadedJoblist=!0,main())},1e3))

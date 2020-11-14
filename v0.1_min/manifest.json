@@ -1,0 +1,38 @@
+{
+    "name": "JobsDB Advanced",
+    "short_name": "JobsDB Advanced",
+    "version": "0.1",
+    "description": "JobsDB Extension",
+    "manifest_version": 2,
+    "permissions": ["activeTab", "declarativeContent", "storage", "tabs", "webNavigation", "notifications", "contextMenus",
+        "http://*.jobsdb.com/*",
+        "https://*.jobsdb.com/*"
+    ],
+    "background": {
+        "scripts": ["js/jquery-3.5.1.min.js", "background.js"],
+        "persistent": true
+    },
+    "browser_action": {
+        "default_title": "JobsDB Advanced",
+        "default_icon": {
+            "32": "images/app_icon/JDA_32.png",
+            "48": "images/app_icon/JDA_48.png",
+            "128": "images/app_icon/JDA_128.png"
+        }
+    },
+    "icons": {
+        "32": "images/app_icon/JDA_32.png",
+        "48": "images/app_icon/JDA_48.png",
+        "128": "images/app_icon/JDA_128.png"
+    },
+    "incognito": "split",
+    "content_scripts": [{
+        "matches": ["*://*.jobsdb.com/*"],
+        "css": ["css/style.css"],
+        "js": ["js/jquery-3.5.1.min.js"],
+        "persistent": false,
+        "run_at": "document_end"
+    }],
+    "web_accessible_resources": ["images/*", "js/*", "*"],
+    "content_security_policy": "script-src 'self' https://www.google-analytics.com; object-src 'self'"
+}
