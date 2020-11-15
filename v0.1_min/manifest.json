@@ -4,7 +4,7 @@
     "version": "0.1",
     "description": "JobsDB Extension",
     "manifest_version": 2,
-    "permissions": ["activeTab", "declarativeContent", "storage", "tabs", "webNavigation", "notifications", "contextMenus",
+    "permissions": ["activeTab", "declarativeContent", "storage", "tabs", "webNavigation", "notifications", "contextMenus", "unlimitedStorage",
         "http://*.jobsdb.com/*",
         "https://*.jobsdb.com/*"
     ],
